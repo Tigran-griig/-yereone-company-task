@@ -1,0 +1,152 @@
+.footer{
+  width: 100%;
+  background-color: #262626;
+  padding: 80px 60px;
+&__container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .ant-tabs-ink-bar{
+    background:#FD4F48!important ;
+    height: 3px!important;
+    width: 40px !important;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: white!important;
+  }
+  .ant-tabs-top > .ant-tabs-nav::before, .ant-tabs-bottom > .ant-tabs-nav::before, .ant-tabs-top > div > .ant-tabs-nav::before, .ant-tabs-bottom > div > .ant-tabs-nav::before{
+    border-bottom: 1px #464646 solid;
+    width: 170px!important;
+  }
+  &__box1{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    &__title{
+
+    }
+    &__info{
+      margin-left: 5px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+
+      &__text{
+        color: white!important;
+        line-height: 0;
+        font-weight: 400;
+        font-size: 12px;
+        &__icon{
+          margin-right: 15px;
+          font-size: 18px;
+        }
+      }
+    }
+    &__payment{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      max-width: 150px;
+      &__visa{
+        width: 50px;
+        height: 50px;
+        background-image: url("../../asets/img/visa.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      &__master{
+        width: 50px;
+        height: 50px;
+        background-image: url("../../asets/img/masterCard.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      &__usb{
+        width: 50px;
+        height: 50px;
+        background-image: url("../../asets/img/usbCard.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+  &__box2{
+    width: 150px;
+
+    &__content{
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+    &__link{
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+    }
+      &__link:hover{
+        color: #FD4F48;
+      }
+    }
+
+  }
+  &__box3{
+    width: 150px;
+  }
+  &__box4{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+      &__info{
+        max-width: 230px;
+
+        &__text{
+
+          color: #868686;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        &__form{
+          display: flex!important;
+          position: relative!important;
+        @media screen and (min-width: 1300px){
+          &__input {
+            border-radius: 25px !important;
+            min-width: 230px !important;
+          }
+        }
+          &__input {
+            border-radius: 25px !important;
+          }
+          &__btn{
+            border-radius: 25px!important;
+            color: white!important;
+            text-transform: uppercase!important;
+            background: #33C0CB!important;
+            border: 0!important;
+            outline: 0!important;
+            font-size: 12px!important;
+            font-weight: 500!important;
+            position: absolute!important;
+            right: 0!important;
+          }
+        }
+      }
+      &__icons{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        max-width: 200px;
+        &__link{
+            border-radius: 100px;
+          width: 40px;
+          height: 40px;
+          padding: 5px;
+          background: white;
+          &__icon{
+            font-size: 30px;
+
+            color: black;
+          }
+        }
+      }
+  }
+}
+}
