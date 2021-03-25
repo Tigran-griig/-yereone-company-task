@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9bfc235b.chunk.css",
+    "main.js": "/static/js/main.145b94fe.chunk.js",
+    "main.js.map": "/static/js/main.145b94fe.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.66cfe333.js",
+    "runtime-main.js.map": "/static/js/runtime-main.66cfe333.js.map",
+    "static/css/2.de2ac02e.chunk.css": "/static/css/2.de2ac02e.chunk.css",
+    "static/js/2.7433b835.chunk.js": "/static/js/2.7433b835.chunk.js",
+    "static/js/2.7433b835.chunk.js.map": "/static/js/2.7433b835.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.de2ac02e.chunk.css.map": "/static/css/2.de2ac02e.chunk.css.map",
+    "static/css/main.9bfc235b.chunk.css.map": "/static/css/main.9bfc235b.chunk.css.map",
+    "static/js/2.7433b835.chunk.js.LICENSE.txt": "/static/js/2.7433b835.chunk.js.LICENSE.txt",
+    "static/media/TopProduct.scss": "/static/media/topProduct3.cd429615.png",
+    "static/media/cofe-bg.8b4656c3.png": "/static/media/cofe-bg.8b4656c3.png",
+    "static/media/header.scss": "/static/media/logo.d5f6ea25.jpg",
+    "static/media/luys-bg.905a0529.png": "/static/media/luys-bg.905a0529.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66cfe333.js",
+    "static/css/2.de2ac02e.chunk.css",
+    "static/js/2.7433b835.chunk.js",
+    "static/css/main.9bfc235b.chunk.css",
+    "static/js/main.145b94fe.chunk.js"
+  ]
+}
