@@ -1,6 +1,6 @@
 const graphql = require('graphql');
 
-const { GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLID, GraphQLInt, GraphQLList,GraphQLBoolean } = graphql;
+const { GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLID,GraphQLList,GraphQLBoolean } = graphql;
 
 
 
@@ -43,10 +43,9 @@ const Query = new GraphQLObjectType({
             type: ShopCardType,
             args: { id: { type: GraphQLID } },
             resolve(parent, args) {
-                return products.find(movie => movie.id === args.id);
+                return products.find(prod => prod.id === args.id);
             },
         },
-
         products: {
             type: new GraphQLList(ShopCardType),
             resolve(parent, args) {
