@@ -5,9 +5,7 @@ import BestSelling from "./bestSelling/BestSelling";
 import FooterAbout from "./footer-about/FooterAbout";
 
 
-
 const Main = () => {
-
     return (
         <div className={'main'}>
             <TopProduct />

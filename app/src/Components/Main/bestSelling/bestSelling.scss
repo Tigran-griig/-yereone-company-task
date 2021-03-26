@@ -11,9 +11,9 @@
   }
   &__content{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     &__card{
+      margin: 5px;
       display: flex;
       flex-direction: column;
       &__img{

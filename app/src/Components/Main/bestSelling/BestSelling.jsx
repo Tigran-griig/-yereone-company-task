@@ -1,19 +1,16 @@
 import React, {useState} from 'react';
 import cofeBg from '../../../asets/img/cofe-bg.png'
 import luys from '../../../asets/img/luys-bg.png'
-
-
+import {productsQuery} from "../query";
 import './bestSelling.scss'
 import Card from "./card";
+import withHoc from '../mainHoc'
 
-
-const BestSelling = () => {
-    const [newProduct,setNewProduct] = useState(false)
-    const [available,setAvailable] = useState(false)
+const BestSelling = (props) => {
 
     return (
         <>
-       <Card available={available} newProduct={newProduct} title={'ԱՄԵՆԱՎԱՃԱՌՎԱԾ'}/>
+       <Card  title={'ԱՄԵՆԱՎԱՃԱՌՎԱԾ'} products={props.data.products?.filter(it=>it.bestSelling)}/>
             <div className={'best-selling-info'}>
                     <div className={'best-selling-info__img'} style={{backgroundImage:`url(${cofeBg})`}}>
                         <div className={'best-selling-info__img__text1'}>
@@ -32,9 +29,9 @@ const BestSelling = () => {
                         </div>
                     </div>
             </div>
-            <Card available={available} newProduct={newProduct} title={'ՆՈՐ ԱՊՐԱՆՔՆԵՐ'}/>
+            <Card title={'ՆՈՐ ԱՊՐԱՆՔՆԵՐ'} products={props.data.products?.filter(it=>it.newProduct)}/>
         </>
     );
 };
 
-export default BestSelling;
+export default withHoc(BestSelling);
