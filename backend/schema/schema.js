@@ -43,7 +43,8 @@ const Query = new GraphQLObjectType({
             type: ShopCardType,
             args: { id: { type: GraphQLID } },
             resolve(parent, args) {
-                return products.find(prod => prod.id === args.id);
+               const {id} = args
+                return products.find(prod => +prod.id === +id);
             },
         },
         products: {
