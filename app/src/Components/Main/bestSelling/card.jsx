@@ -13,7 +13,7 @@ const Card = ({title,products}) => {
         <div className={'best-selling'}>
             <p className={'best-selling__title'} >{title}</p>
             <div className={'best-selling__content'}>
-                {products.map(it=><div className={'best-selling__content__card'}>
+                {products?.map(it=><div className={'best-selling__content__card'}>
                         <div className={'best-selling__content__card__img'} style={{backgroundImage: `url(${img})`}}>
                             <img className={'best-selling__content__card__img__icon1'} src={it.sale ? newProd : sale}/>
                             <img className={'best-selling__content__card__img__icon2'} src={it.available ? open : sold}/>
