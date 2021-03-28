@@ -42,31 +42,19 @@
       }
     }
     &__payment{
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      max-width: 150px;
-      &__visa{
-        width: 50px;
-        height: 50px;
-        background-image: url("../../asets/img/visa.jpg");
-        background-position: center;
-        background-size: cover;
-      }
-      &__master{
-        width: 50px;
-        height: 50px;
-        background-image: url("../../asets/img/masterCard.jpg");
-        background-position: center;
-        background-size: cover;
-      }
-      &__usb{
-        width: 50px;
-        height: 50px;
-        background-image: url("../../asets/img/usbCard.jpg");
-        background-position: center;
-        background-size: cover;
-      }
+      position: relative;
+      width: 135px;
+      height: 25px;
+     &__img{
+     position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background-size: cover;
+     }
+
+
     }
   }
   &__box2{

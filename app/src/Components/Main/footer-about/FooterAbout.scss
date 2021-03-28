@@ -1,6 +1,5 @@
 .footer-about{
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin: 80px 0;
     &__box{
@@ -17,7 +16,6 @@
        width: 80px;
          left: 80px;
        }
-
      }
       &__info{
         &__title{

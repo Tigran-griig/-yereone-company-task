@@ -8,7 +8,7 @@ import {Tabs, Form, Input, Button} from 'antd';
 import {TiSocialFacebook} from 'react-icons/ti'
 import {RiInstagramFill} from  'react-icons/ri'
 import {AiOutlineTwitter} from 'react-icons/ai'
-
+import paymentIcons from '../../asets/svg/paymen-icons.svg'
 
 import {Link} from "react-router-dom";
 
@@ -19,7 +19,7 @@ const { TabPane } = Tabs;
 
 const Footer = () => {
     const onFinish  = (values) =>{
-        console.log(values)
+        return values
     }
 
     return (
@@ -33,13 +33,9 @@ const Footer = () => {
                           <p className={'footer__container__box1__info__text'}><MdLocationOn className={'footer__container__box1__info__text__icon'}/>Հասցե, 3/5 Երևան, ՀՀ</p>
                           <p className={'footer__container__box1__info__text'}><IoMailOpen className={'footer__container__box1__info__text__icon'}/>giftshop@gmail.com</p>
                           <p className={'footer__container__box1__info__text'}><ImPhone className={'footer__container__box1__info__text__icon'}/>(044) 989-177</p>
-
                       </div>
                       <div className={'footer__container__box1__payment'}>
-                           <Link className={'footer__container__box1__payment__visa'} to={'/'}></Link>
-                          <Link className={'footer__container__box1__payment__master'} to={'/'}></Link>
-                          <Link className={'footer__container__box1__payment__usb'} to={'/'}></Link>
-
+                            <span className={'footer__container__box1__payment__img'} style={{backgroundImage: `url(${paymentIcons})`}}></span>
                       </div>
                   </div>
                   <div className={'footer__container__box2'}>
@@ -51,7 +47,6 @@ const Footer = () => {
                                      <Link className={'footer__container__box2__content__link'} to={'/'}>Մանկական</Link>
                                      <Link className={'footer__container__box2__content__link'} to={'/'}>Կանանց</Link>
                                      <Link className={'footer__container__box2__content__link'} to={'/'}>Տան</Link>
-
                                  </div>
                               </TabPane>
                           </Tabs>
@@ -65,7 +60,6 @@ const Footer = () => {
                                   <Link className={'footer__container__box2__content__link'} to={'/'}>Մուտք</Link>
                                   <Link className={'footer__container__box2__content__link'} to={'/'}>Առաքում</Link>
                                   <Link className={'footer__container__box2__content__link'} to={'/'}>Վճարում</Link>
-
                               </div>
                           </TabPane>
                       </Tabs>

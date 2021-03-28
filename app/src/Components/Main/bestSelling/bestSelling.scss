@@ -17,30 +17,49 @@
       margin: 5px;
       display: flex;
       flex-direction: column;
+      &__container-img{
+        overflow: hidden;
+      }
       &__img{
         height: 280px;
         width: 280px;
-        background-size: cover;
         margin-top: 10px;
         position: relative;
         cursor: pointer;
         &__icon1{
-          position: absolute;
-          right: 25px;
+          height: 53px;
+          position: relative;
+          width: 30px;
+          &__text{
+            position: absolute;
+            transform: rotate(90deg);
+            color: white;
+            top: 12px;
+            left: 3px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 13px;
+          }
+
         }
         &__icon2{
-          position: absolute;
-          left: 10px;
+          width: 40px;
+          height: 40px;
         }
       }
       &__img:hover{
-        background-size: unset;
-        transition-duration: 500ms;
-
-        img{
-          transition-duration: 500ms;
-          opacity: 0;
+         transform: scale(1.3);
+         transition-duration: 1000ms;
+        .best-selling__content__card__img__icon1__text{
+           font-size: 0;
         }
+        .best-selling--card-icon{
+          transition-duration: 500ms;
+
+          width: 0;
+        }
+
       }
       &__info{
         display: flex;
@@ -136,4 +155,10 @@
     }
   }
 
+}
+
+.best-selling--card-icon{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
 }

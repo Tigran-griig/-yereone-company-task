@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import cofeBg from '../../../asets/img/cofe-bg.png'
 import luys from '../../../asets/img/luys-bg.png'
-import {productsQuery} from "../query";
 import './bestSelling.scss'
 import Card from "./card";
 import withHoc from '../mainHoc'
