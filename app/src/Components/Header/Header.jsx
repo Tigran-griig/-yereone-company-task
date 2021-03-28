@@ -11,10 +11,12 @@ import smile from '../../asets/svg/Group.svg'
 import bag from '../../asets/svg/bag 1.svg'
 import {AiOutlineMenu} from 'react-icons/ai'
 
+
 import Menu from './Menu'
 const Header = () => {
   const [width] = useWindowSize()
-    const [visible,setVisible] = useState(false)
+  const [visible,setVisible] = useState(false)
+
     const showDrawer = () => {
         setVisible(true)
     };
