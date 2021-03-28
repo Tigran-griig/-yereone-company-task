@@ -28,8 +28,8 @@ const ShopCardType = new GraphQLObjectType({
     fields : () =>({
         id:{type:GraphQLID},
         name:{type:GraphQLString},
-        price:{type:GraphQLInt},
-        rate:{type:GraphQLInt},
+        price:{type:GraphQLString},
+        rate:{type:GraphQLString},
         available:{type:GraphQLBoolean},
         newProduct:{type:GraphQLBoolean},
         bestSelling:{type:GraphQLBoolean},
@@ -45,8 +45,8 @@ const Mutation = new GraphQLObjectType({
             type: ShopCardType,
             args: {
                 name: { type: new GraphQLNonNull(GraphQLString) },
-                price:{ type: new GraphQLNonNull(GraphQLInt) },
-                rate:{type:GraphQLInt},
+                price:{ type: new GraphQLNonNull(GraphQLString) },
+                rate:{type:GraphQLString},
                 available:{type:GraphQLBoolean},
                 newProduct:{type:GraphQLBoolean},
                 bestSelling:{type:GraphQLBoolean},
