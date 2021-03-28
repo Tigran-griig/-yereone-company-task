@@ -25,9 +25,7 @@ const Card = ({title,products}) => {
                         <div className={'best-selling__content__card__info'}>
                             <p className={'best-selling__content__card__info__name'}>{it.name}</p>
                             <p className={'best-selling__content__card__info__price'}>{it.price}</p>
-                            <p className={'best-selling__content__card__info__rate'}><Rate style={{fontSize: 13}} disabled
-                                                                                           defaultValue={it.rate}/></p>
-
+                            <p className={'best-selling__content__card__info__rate'}><Rate style={{fontSize: 13}} disabled defaultValue={it.rate}/></p>
                         </div>
                     </div>
                 )}

@@ -1,11 +1,13 @@
 const graphql = require('graphql');
 
-const { GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLID,GraphQLList,GraphQLBoolean } = graphql;
+const Products = require('../models/productSchema')
+
+const { GraphQLObjectType, GraphQLString, GraphQLSchema,GraphQLInt, GraphQLNonNull,GraphQLID,GraphQLList,GraphQLBoolean } = graphql;
 
 
 
 const products = [
-    { id: 1, name: 'Փոքրիկ Նվերի Տուփ', price: '300Դ',rate:5, available:true,newProduct:true,bestSelling:true,sale:true},
+    { id: 1, name: "Փոքրիկ Նվերի Տուփ", price: "300Դ",rate:5, available:true,newProduct:true,bestSelling:true,sale:true},
     { id: 2, name: 'Թեյի Բաժակ', price: '4.000Դ',rate:4, available:true,newProduct:true,bestSelling:true,sale:false},
     { id: 3, name: 'Օծանելիք - Դիոր', price: '9000Դ',rate:3, available:true,newProduct:true,bestSelling:true,sale:true},
     { id: 4, name: 'Գիրք - Հեղինակի անուն', price: '6000Դ',rate:3.5, available:true,newProduct:true,bestSelling:true,sale:true},
@@ -22,12 +24,12 @@ const products = [
 
 
 const ShopCardType = new GraphQLObjectType({
-    name:`Product`,
+    name:'Product',
     fields : () =>({
         id:{type:GraphQLID},
         name:{type:GraphQLString},
-        price:{type:GraphQLString},
-        rate:{type:GraphQLString},
+        price:{type:GraphQLInt},
+        rate:{type:GraphQLInt},
         available:{type:GraphQLBoolean},
         newProduct:{type:GraphQLBoolean},
         bestSelling:{type:GraphQLBoolean},
@@ -35,6 +37,41 @@ const ShopCardType = new GraphQLObjectType({
     })
 })
 
+
+const Mutation = new GraphQLObjectType({
+    name: 'Mutation',
+    fields: {
+        addProduct: {
+            type: ShopCardType,
+            args: {
+                name: { type: new GraphQLNonNull(GraphQLString) },
+                price:{ type: new GraphQLNonNull(GraphQLInt) },
+                rate:{type:GraphQLInt},
+                available:{type:GraphQLBoolean},
+                newProduct:{type:GraphQLBoolean},
+                bestSelling:{type:GraphQLBoolean},
+                sale:{type:GraphQLBoolean}
+            },
+            resolve(parent, { name, price,rate,available,newProduct,bestSelling,sale }) {
+                const product = new Products({
+                    name,
+                    rate,
+                    available,
+                    price,
+                    newProduct,
+                    bestSelling,
+                    sale
+
+
+                });
+                return product.save();
+            },
+        },
+
+
+
+    }
+});
 
 const Query = new GraphQLObjectType({
     name: 'Query',
@@ -44,7 +81,7 @@ const Query = new GraphQLObjectType({
             args: { id: { type: GraphQLID } },
             resolve(parent, args) {
                const {id} = args
-                return products.find(prod => +prod.id === +id);
+                return Products.findById(id);
             },
         },
         products: {
@@ -58,4 +95,5 @@ const Query = new GraphQLObjectType({
 
 module.exports = new GraphQLSchema({
     query: Query,
+    mutation: Mutation,
 });
